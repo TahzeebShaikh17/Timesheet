@@ -112,7 +112,7 @@ export default function LoginPage() {
       </div>
 
       <div style={{ 
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        background: 'linear-gradient(to right, #f7f8fc, #e4e8f0)',
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
@@ -122,61 +122,44 @@ export default function LoginPage() {
         boxSizing: 'border-box'
       }}>
         <div style={{ 
-          maxWidth: '420px', 
+          maxWidth: '470px', 
           width: '100%',
           position: 'relative',
           zIndex: 10,
           margin: '0 auto'
         }}>
           {/* Header */}
-          <div style={{ 
+         
+
+          {/* Login Form */}
+          <div className="form-container">
+             <div style={{ 
             textAlign: 'center', 
-            marginBottom: 'clamp(2rem, 6vw, 3rem)'
+            marginBottom: '10px'
           }}>
-            <div style={{
-              width: 'clamp(60px, 15vw, 80px)',
-              height: 'clamp(60px, 15vw, 80px)',
-              background: 'rgba(255, 255, 255, 0.95)',
-              borderRadius: '20px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto',
-              marginBottom: 'clamp(1.5rem, 4vw, 2rem)',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
-              backdropFilter: 'blur(20px)',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              fontSize: 'clamp(1.5rem, 4vw, 2rem)'
-            }}>
-              🌐
-            </div>
-            <h1 style={{
-              fontSize: 'clamp(1.75rem, 5vw, 2.5rem)',
+            <h5 style={{
+              fontSize: '30px',
               fontWeight: '700',
-              color: 'white',
-              margin: '0 0 0.75rem 0',
+              color: '#0f4d6f',
+              margin: '6px 0px 10px 0px',
               textAlign: 'center',
               lineHeight: '1.2',
               letterSpacing: '-0.02em'
             }}>
-              Welcome to OnePortal
-            </h1>
+              Welcome to Timesheet
+            </h5>
             <p style={{
-              color: 'rgba(255, 255, 255, 0.9)',
-              fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)',
-              margin: '0',
+              color: '#67c7ec',
+              fontSize: '16px',
+              margin: '0px auto',
               fontWeight: '500',
               lineHeight: '1.5',
               maxWidth: '280px',
-              marginLeft: 'auto',
-              marginRight: 'auto'
+              marginBottom: '20px',
             }}>
               Sign in to your account to continue
             </p>
           </div>
-
-          {/* Login Form */}
-          <div className="form-container">
             <form onSubmit={handleSubmit}>
               {error && (
                 <div style={{
@@ -275,7 +258,8 @@ export default function LoginPage() {
                   style={{ 
                     width: '100%',
                     position: 'relative',
-                    opacity: isSubmitting ? 0.7 : 1
+                    opacity: isSubmitting ? 0.7 : 1,
+                    padding: '12px',
                   }}
                 >
                   {isSubmitting ? (

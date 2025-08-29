@@ -14,7 +14,7 @@ interface SidebarItem {
 
 const navigation: SidebarItem[] = [
   { name: 'Dashboard', href: '/dashboard', icon: 'fas fa-home' },
-    { name: 'Timesheet', href: '/timesheet', icon: 'fas fa-calendar' },
+    { name: 'Timesheet', href: '/timesheet/add', icon: 'fas fa-calendar' },
 
 ];
 
@@ -79,7 +79,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         </div>
         
         {/* Navigation */}
-        <nav className="relative z-10">
+        <nav className="relative navbar-side z-10 ">
           {navigation.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -98,7 +98,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               console.error('Logout error:', error);
             }
           }}>
-            <i className="fas fa-sign-out-alt"></i>
+            <i className="fas fa-sign-out-alt "></i>
             <span>Log Out</span>
           </div>
         </nav>

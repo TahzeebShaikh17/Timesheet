@@ -18,7 +18,7 @@ import {
   FaChevronRight,
   FaBriefcase,
   FaStickyNote,
-  FaPlus,
+  
 } from "react-icons/fa";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
